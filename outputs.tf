@@ -11,6 +11,6 @@ output "this_vpc_arn" {
   value = aws_vpc.main.arn
 }
 
-output "this_vpc_id" {
+output "aws_vpc_id" {
   value = aws_vpc.main.id
 }
