@@ -1,10 +1,10 @@
-module "gabriel_aws_basic_vpc" {
-  source       = "git::https://github.com/GabrielHespanhol/terraform-aws-basic-vpc.git?ref=v0.1.0" # Module repo url
-  aws_vpc_cidr = "192.168.100.0/24" # VPC CIDR block
-  vpc_name     = "first_vpc" # VPC name
+module "my_aws_basic_vpc" {
+  source             = "git::https://github.com/GabrielHespanhol/terraform-aws-basic-vpc.git?ref=main"
+  aws_vpc_cidr_block = "10.0.0.0/16"
+  aws_vpc_name       = "my_vpc_name"
 
-  tags = {
-    Name        = "first_vpc"
+  aws_vpc_tags = {
+    Name        = "my_vpc_name"
     Environment = "dev"
   }
 }
