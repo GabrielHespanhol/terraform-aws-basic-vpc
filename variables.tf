@@ -5,7 +5,7 @@ variable "aws_vpc_cidr_block" {
   default     = "10.0.0.0/16"
 
   validation {
-    condition     = can(cidrnetmask(var.aws_vpc_cidr))
+    condition     = can(cidrnetmask(var.aws_vpc_cidr_block))
     error_message = "The value of aws_vpc_cidr must be a valid IPv4 CIDR Block"
   }
 }
